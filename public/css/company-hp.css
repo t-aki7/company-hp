@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.test {
+    color: red;
+}
+
+.word-wrapping {
+    overflow-wrap: break-word;
+　　word-wrap: break-word;
+}
+
+.word-wrapping2 {
+    word-break: break-all;
+}
