@@ -20,9 +20,10 @@
                 <div class="word-wrapping">{{$confirms->content}}</div>
             </div>
             
-            <div class="text-center">
+            <div class="text-center ">
                 {!! Form::open(['route' => ['contacts.store', $confirms]]) !!}
-                    {!! Form::submit('送信', ['class' => '']) !!}
+                    {!! Form::submit('送信', ['name' => 'action', 'class' => 'confirm-submit']) !!}
+                    {!! Form::submit('修正', ['name' => 'action', 'class' => '']) !!}
                 {!! Form::close() !!}    
             </div>
             

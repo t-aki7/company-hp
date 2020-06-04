@@ -12,3 +12,8 @@
 .word-wrapping2 {
     word-break: break-all;
 }
+
+.confirm-submit {
+    display: inline-block;
+    margin: 0 50px;
+}

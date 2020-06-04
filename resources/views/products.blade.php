@@ -2,5 +2,5 @@
 
 @section('content')
     
-    <div>products</div>
+    <h1 class="text-center">製品</h1>
 @endsection

@@ -45,11 +45,28 @@ class ContactsController extends Controller
      */
     public function store(Request $request)
     {
+        $input = $request->except('action');
+        if($request->action === '修正') {
+            return redirect()->route('contacts.create')->withInput($input);
+        }
+        
+        $request->session()->regenerateToken();
+        
         $contact = new Contact;
         $contact->name = $request->name;
         $contact->email = $request->email;
         $contact->content = $request->content;
         $contact->save();
+        
+        //メール送信
+        \Mail::send(new \App\Mail\ContactMail([
+            'to' => $request->email,
+            'to_name' => $request->name,
+            'my_adress' => 'aki.toyomasu@gmail.com',
+            'my_name' => '豊増明博',
+            'subject' => 'お問い合わせ受付完了のお知らせ',
+            'body' => $request->content,
+        ],'to'));
         
         return view('contacts.result');
     }

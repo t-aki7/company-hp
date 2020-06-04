@@ -2,5 +2,5 @@
 
 @section('content')
     
-    <div>plivacy policy</div>
+    <h1 class="text-center">プライバシーポリシー</h1>
 @endsection

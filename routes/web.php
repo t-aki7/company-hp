@@ -29,4 +29,4 @@ Route::get('privacy_policy', function () {
 Route::resource('contacts', 'ContactsController');
 Route::post('contacts/confirm','ContactsController@confirm')->name('contacts.confirm');
 
-Route::get('/index', 'ContactsController@index');
+//Route::get('/index', 'ContactsController@index');

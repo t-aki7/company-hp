@@ -2,5 +2,5 @@
 
 @section('content')
     
-    <div>company_info</div>
+    <h1 class="text-center">企業情報</h1>
 @endsection
