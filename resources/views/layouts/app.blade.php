@@ -28,7 +28,7 @@
             </nav>
         </header>
         
-        <div class="container">
+        <div class="container mb-5">
             @include('layouts.error_messages')
             
             @yield('content')
@@ -37,7 +37,7 @@
         <footer class="fixed-bottom">
             <div class="text-center">
                 <div class="bg-dark">{!! link_to_route('privacy_policy', 'プライバシーポリシー', [], ['class' => 'text-white text-decoration-none']) !!}</div>
-                <div>©2020 toyomasu akihiro</div>
+                <div>©2020 maruwa</div>
             </div>
         </footer>
         

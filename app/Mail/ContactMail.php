@@ -28,7 +28,7 @@ class ContactMail extends Mailable
         return $this->view('contacts.emails.'. $this->viewStr)
             ->to($this->content['to'], $this->content['to_name'])
             ->bcc($this->content['my_adress'])
-            ->from($this->content['my_adress'], $this->content['my_name'])
+            ->from($this->content['my_contact_adress'], $this->content['my_name'])
             ->subject($this->content['subject'])
             ->with([
                 'content' => $this->content,

@@ -56,14 +56,15 @@ class ContactsController extends Controller
         $contact->name = $request->name;
         $contact->email = $request->email;
         $contact->content = $request->content;
-        $contact->save();
+        //$contact->save();テーブルを使わない2020/10/5
         
         //メール送信
         \Mail::send(new \App\Mail\ContactMail([
             'to' => $request->email,
             'to_name' => $request->name,
             'my_adress' => 'aki.toyomasu@gmail.com',
-            'my_name' => '豊増明博',
+            'my_contact_adress' => 'maruwa.contact@gmail.com',
+            'my_name' => '株式会社丸和 お問い合わせ',
             'subject' => 'お問い合わせ受付完了のお知らせ',
             'body' => $request->content,
         ],'to'));
